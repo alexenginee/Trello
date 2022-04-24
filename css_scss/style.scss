@@ -1,0 +1,68 @@
+.app {
+  margin: 0 auto;
+  text-align: center;
+}
+button {
+}
+.boards {
+  max-width: 20rem;
+  &__item {
+    .todo-counter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &__title {
+      }
+      &__counter {
+      }
+    }
+    .list {
+      &__item {
+      }
+    }
+    .form {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+
+      &__input-title {
+        text-align: center;
+      }
+      &__input-desc {
+        text-align: center;
+      }
+      &__btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        &__btn-user {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+        &__btn-cancel {
+          display: flex;
+          align-items: center;
+          background: rgb(192, 13, 13);
+          color: aliceblue;
+          border-radius: 3px;
+        }
+        &__btn-confirm {
+          display: flex;
+          align-items: center;
+          background: rgb(19, 138, 194);
+          color: aliceblue;
+          border-radius: 3px;
+        }
+      }
+    }
+    .btn-add {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
