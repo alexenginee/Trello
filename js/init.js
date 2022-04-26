@@ -12,9 +12,10 @@ export {
 
 let lists = document.querySelector(".list");
 let todoCounter = document.querySelector(".todo-counter__counter");
+
 let btnAdd = document.querySelector(".btn-add");
-let btnConfirm = document.querySelector(".form__btn__btn-confirm");
-let btnCancel = document.querySelector(".form__btn__btn-cancel");
+let btnConfirm = document.querySelector(".form__btn__btnOnOff__btn-confirm");
+let btnCancel = document.querySelector(".form__btn__btnOnOff__btn-cancel");
 let btnUser = document.querySelector(".form__btn__btn-user");
 let inputDesc = document.querySelector(".form__input-desc");
 let inputTitle = document.querySelector(".form__input-title");

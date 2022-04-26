@@ -17,7 +17,6 @@ import {
   fillHtmlList,
   setLocal,
   getLocal,
-  btnListConfirm,
 } from "./list.js";
 
 fillHtmlList();
@@ -61,8 +60,15 @@ btnConfirm.addEventListener("click", () => {
   btnAdd.style.display = "flex";
 });
 
-btnListConfirm.addEventListener("ckick", () => {
-  todos.forEach((e) => {
-    console.log(e);
-  });
-});
+// lists.addEventListener("click", function (event) {
+//   if (event.target.closest(".btn__btnDelete")) {
+//     todos.forEach((e, i) => {
+//       let pane = event.target.closest(`#todo_${i}`);
+//       e == pane;
+
+//       todos.splice(i, 1);
+//       setLocal("todos", todos);
+//       pane.remove();
+//     });
+//   }
+// });

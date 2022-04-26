@@ -18,7 +18,6 @@ export {
   setLocal,
   getLocal,
   getDate,
-  btnListConfirm,
 };
 
 let todos;
@@ -36,15 +35,15 @@ function Todo(title, desc) {
   this.confirm = false;
 }
 
-let createTemplate = (todo, index) => {
-  return `  <div class="list__item ${
-    todo.confirm ? "checked" : ""
-  }" draggable="true"><div> 
+const createTemplate = (todo, index) => {
+  return `  <div id = 'todo_${index}' class="list__item ${
+    todo.confirm ? "confirm" : ""
+  }"  draggable="true"><div> 
       <p class="list__item__txtTitle">
          ${todo.title}
       </p>
       <div class="list__item__btn">
-      <button class="btn__btnEdit">
+      <button class="btn__btnEdit" >
           Edit
       </button>
       <button class="btn__btnDelete">
@@ -53,10 +52,10 @@ let createTemplate = (todo, index) => {
       </div>
     </div>
     <div>
-      <p class="list__item__txtDeck">
+      <p class="list__item__txtDesc">
             ${todo.desc}
       </p>
-      <button  class="list__item__btnConfirm" ${todo.confirm ? "checked" : ""}>
+      <button  class="list__item__btnConfirm ${todo.confirm ? "confirm" : ""}" >
            Confirm
       </button>
     </div>
@@ -98,4 +97,3 @@ function getDate() {
   let date = new Date().toLocaleTimeString().slice(0, -3);
   return date;
 }
-let btnListConfirm = document.querySelector(".list__item__btnConfirm");
