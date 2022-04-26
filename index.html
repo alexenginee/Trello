@@ -10,13 +10,38 @@
   <body>
     <div class="app">
       <div class="boards">
-        <div class="boards__item">
+        <div class="boards__item todo">
           <div class="todo-counter">
-            <p class="todo-counter__title">TODO:</p>
+            <p class="todo-counter__title">To Do</p>
             <p class="todo-counter__counter">0</p>
           </div>
           <div class="list">
-            <div class="list__item" draggable="true"></div>
+           
+          </div>
+          <div class="form">
+            <input
+              class="form__input-title"
+              placeholder="Title"
+            ></input>
+            <input
+              class="form__input-desc"
+              placeholder="Write something"
+            ></input>
+            <div class="form__btn">
+              <button class="form__btn__btn-user">User</button>
+              <button class="form__btn__btn-cancel">Cancel</button>
+              <button class="form__btn__btn-confirm">Confirm</button>
+            </div>
+          </div>
+          <button class="btn-add">New card</button>
+        </div>
+        <div>  <div class="boards__item todo">
+          <div class="todo-counter">
+            <p class="todo-counter__title">In process</p>
+            <p class="todo-counter__counter">0</p>
+          </div>
+          <div class="list">
+           
           </div>
           <div class="form">
             <input
@@ -29,12 +54,13 @@
             ></input>
             <div class="form__btn">
               <button class="form__btn__btn-user">User</button>
-              <button class="form__btn__btn-cancel">Cancel</button>
-              <button class="form__btn__btn-confirm">Confirm</button>
-            </div>
+              <div class="form__btn__btnOnOff">
+                <button class="btn-cancel">Cancel</button>
+              <button class="btn-confirm">Confirm</button></div>
+                                       </div>
           </div>
-          <button class="btn-add">Add todo</button>
-        </div>
+          
+        </div></div>
       </div>
     </div>
   </body>

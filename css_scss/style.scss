@@ -1,39 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #e5e5e5;
+  margin: 0 auto;
+  text-align: center;
+}
 .app {
   margin: 0 auto;
   text-align: center;
 }
 button {
+  border: none;
+  background: #ffffff;
+
+  cursor: pointer;
 }
 .boards {
-  max-width: 20rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+
   &__item {
+    border-radius: 1rem;
+    width: 20rem;
+
     .todo-counter {
+      padding-left: 1rem;
       display: flex;
+      margin-bottom: 2rem;
+
+      justify-content: start;
       align-items: center;
-      justify-content: space-between;
+
       &__title {
       }
       &__counter {
+        margin-left: 1rem;
+        border-radius: 1rem;
+        padding: 0.2rem 0.5rem;
+        background-color: #ddc5c5;
+        box-shadow: 0px 2px 2px px rgba(0, 0, 0, 0.25);
       }
     }
     .list {
       &__item {
+        background: #ffffff;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        margin-bottom: 2rem;
+        padding: 0 0.5rem;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        &__txtTitle {
+          width: 14rem;
+          text-align: start;
+        }
+        &__txtDesc {
+          width: 14rem;
+        }
+        &__btn {
+          display: flex;
+          justify-content: end;
+          gap: 0.5rem;
+          padding-top: 1rem;
+          text-decoration: underline;
+        }
+        &__user {
+          display: flex;
+          justify-content: start;
+          gap: 0.5rem;
+        }
+
+        div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
       }
     }
     .form {
+      width: 20rem;
       display: none;
       flex-direction: column;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       gap: 1rem;
+      margin-right: 0.5rem;
 
       &__input-title {
-        text-align: center;
+        width: 18rem;
+        border: none;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        &::placeholder {
+          padding-left: 1rem;
+          color: rgba(107, 107, 107, 1);
+          border: none;
+        }
       }
       &__input-desc {
-        text-align: center;
+        width: 18rem;
+        border: none;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        padding-bottom: 3rem;
+        &::placeholder {
+          padding-left: 1rem;
+          color: rgba(107, 107, 107, 1);
+          border: none;
+        }
       }
       &__btn {
+        width: 18rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -43,26 +127,36 @@ button {
           align-items: center;
           gap: 1rem;
         }
-        &__btn-cancel {
+        &__btnOnOff {
           display: flex;
-          align-items: center;
-          background: rgb(192, 13, 13);
-          color: aliceblue;
-          border-radius: 3px;
-        }
-        &__btn-confirm {
-          display: flex;
-          align-items: center;
-          background: rgb(19, 138, 194);
-          color: aliceblue;
-          border-radius: 3px;
+          justify-content: end;
+          &__btn-cancel {
+            display: flex;
+            align-items: center;
+            background: rgb(192, 13, 13);
+            color: aliceblue;
+            border-radius: 3px;
+          }
+          &__btn-confirm {
+            display: flex;
+            align-items: center;
+            background: rgb(19, 138, 194);
+            color: aliceblue;
+            border-radius: 3px;
+          }
         }
       }
     }
     .btn-add {
+      width: 20rem;
       margin: 0 auto;
+      padding: 1rem;
       display: flex;
+      justify-content: center;
       align-items: center;
+      background: #ffffff;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      border-radius: 1rem;
     }
   }
 }
