@@ -8,17 +8,10 @@ import {
   inputDesc,
   inputTitle,
   form,
+  clock,
 } from "./init.js";
 
-export {
-  todos,
-  Todo,
-  createTemplate,
-  fillHtmlList,
-  setLocal,
-  getLocal,
-  getDate,
-};
+export { todos, Todo, createTemplate, render, setLocal, getLocal, getDate };
 
 let todos;
 
@@ -74,7 +67,7 @@ const createTemplate = (todo, index) => {
           `;
 };
 
-let fillHtmlList = () => {
+let render = () => {
   lists.innerHTML = "";
   if (todos.length > 0) {
     todos.forEach((item, index) => {

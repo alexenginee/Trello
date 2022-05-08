@@ -18,12 +18,12 @@ button {
   cursor: pointer;
 }
 .boards {
+  max-width: 75rem;
   margin: 0 auto;
   margin-top: 2rem;
   text-align: center;
   display: flex;
-  justify-content: center;
-  gap: 10rem;
+  justify-content: space-between;
 
   &__item {
     border-radius: 1rem;

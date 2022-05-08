@@ -9,17 +9,19 @@ import {
   inputDesc,
   inputTitle,
   form,
+  clock,
 } from "./init.js";
 import {
   todos,
   Todo,
   createTemplate,
-  fillHtmlList,
+  render,
   setLocal,
   getLocal,
+  getDate,
 } from "./list.js";
 
-fillHtmlList();
+render();
 let valueTitle;
 let valueDesc;
 
@@ -51,7 +53,7 @@ btnConfirm.addEventListener("click", () => {
   todos.push(new Todo(inputTitle.value, inputDesc.value));
 
   setLocal("todos", todos);
-  fillHtmlList();
+  render();
   todoCounter.innerHTML = todos.length;
 
   inputDesc.value = "";
@@ -60,6 +62,7 @@ btnConfirm.addEventListener("click", () => {
   btnAdd.style.display = "flex";
 });
 
+clock.innerText = getDate();
 // lists.addEventListener("click", function (event) {
 //   if (event.target.closest(".btn__btnDelete")) {
 //     todos.forEach((e, i) => {

@@ -8,6 +8,7 @@ export {
   inputDesc,
   inputTitle,
   form,
+  clock,
 };
 
 let lists = document.querySelector(".list");
@@ -20,3 +21,5 @@ let btnUser = document.querySelector(".form__btn__btn-user");
 let inputDesc = document.querySelector(".form__input-desc");
 let inputTitle = document.querySelector(".form__input-title");
 let form = document.querySelector(".form");
+
+let clock = document.querySelector("#clock");

@@ -21,16 +21,16 @@ button {
 }
 
 .boards {
+  max-width: 75rem;
   margin: 0 auto;
   margin-top: 2rem;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 10rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .boards__item {
