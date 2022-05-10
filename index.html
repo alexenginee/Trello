@@ -28,11 +28,14 @@
               placeholder="Write something"
             ></input>
           <div class="form__btn">
-              <button class="form__btn__btn-user">User</button>
+            <select class="form__btn__select-user"name="user" id="selectUser">
+            </select>
+             
               <div class="form__btn__btnOnOff">
                 <button class="form__btn__btnOnOff__btn-cancel">Cancel</button>
-              <button class="form__btn__btnOnOff__btn-confirm">Confirm</button></div>
-                                       </div>
+              <button class="form__btn__btnOnOff__btn-confirm">Confirm</button>
+              </div>
+              </div>
           </div>
           <button class="btn-add">New card</button>
         </div>
@@ -42,52 +45,23 @@
             <p class="todo-counter__counter">0</p>
           </div>
           <div class="list">
-                     </div>
-          <div class="form">
-            <input
-              class="form__input-title"
-              placeholder="Title"
-            ></input>
-            <input
-              class="form__input-desc"
-              placeholder="Description"
-            ></input>
-            <div class="form__btn">
-              <button class="form__btn__btn-user">User</button>
-              <div class="form__btn__btnOnOff">
-                <button class="form__btn__btnOnOff__btn-cancel">Cancel</button>
-              <button class="form__btn__btnOnOff__btn-confirm">Confirm</button></div>
-                                       </div>
           </div>
-            </div>
+          </div>
         </div>
-          <div>  <div class="boards__item todo">
+          <div>  
+          <div class="boards__item todo">
           <div class="todo-counter">
             <p class="todo-counter__title">Done</p>
             <p class="todo-counter__counter">0</p>
           </div>
           <div class="list">
-                     </div>
-          <div class="form">
-            <input
-              class="form__input-title"
-              placeholder="Title"
-            ></input>
-            <input
-              class="form__input-desc"
-              placeholder="Description"
-            ></input>
-            <div class="form__btn">
-              <button class="form__btn__btn-user">User</button>
-              <div class="form__btn__btnOnOff">
-                <button class="form__btn__btnOnOff__btn-cancel">Cancel</button>
-              <button class="form__btn__btnOnOff__btn-confirm">Confirm</button></div>
-                                       </div>
           </div>
-            </div>
+          
+          </div>
         </div>
-                  <div>  <div class="clock">
-  <p id="clock"></p>
+        <div>  
+        <div class="clock">
+          <p id="clock"></p>
         </div>
         </div>
       </div>
@@ -96,3 +70,5 @@
 </html>
 
 <script src="./js/trello.js" type="module"></script>
+
+

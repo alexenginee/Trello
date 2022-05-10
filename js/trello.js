@@ -5,7 +5,7 @@ import {
   btnAdd,
   btnConfirm,
   btnCancel,
-  btnUser,
+  selectUser,
   inputDesc,
   inputTitle,
   form,
@@ -20,6 +20,7 @@ import {
   getLocal,
   getDate,
 } from "./list.js";
+import { users, urlUsers, fetchUsers, renderUsers, option } from "./users.js";
 
 render();
 let valueTitle;
@@ -40,6 +41,7 @@ btnAdd.addEventListener("click", () => {
   inputTitle.addEventListener("input", (e) => {
     valueTitle = e.target.value;
   });
+  fetchUsers(urlUsers);
 });
 
 btnCancel.addEventListener("click", () => {
@@ -50,12 +52,20 @@ btnCancel.addEventListener("click", () => {
 });
 
 btnConfirm.addEventListener("click", () => {
-  todos.push(new Todo(inputTitle.value, inputDesc.value));
+  todos.push(
+    new Todo(
+      inputTitle.value,
+      inputDesc.value,
+      selectUser.value,
+      option.dataset.image
+    )
+  );
 
   setLocal("todos", todos);
+  setLocal("users", users);
   render();
   todoCounter.innerHTML = todos.length;
-
+  selectUser.value = "";
   inputDesc.value = "";
   inputTitle.value = "";
   form.style.display = "none";
@@ -63,6 +73,7 @@ btnConfirm.addEventListener("click", () => {
 });
 
 clock.innerText = getDate();
+
 // lists.addEventListener("click", function (event) {
 //   if (event.target.closest(".btn__btnDelete")) {
 //     todos.forEach((e, i) => {

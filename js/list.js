@@ -4,7 +4,7 @@ import {
   btnAdd,
   btnConfirm,
   btnCancel,
-  btnUser,
+  selectUser,
   inputDesc,
   inputTitle,
   form,
@@ -21,10 +21,12 @@ if (!localStorage.todos) {
   todos = getLocal("todos");
 }
 
-function Todo(title, desc) {
+function Todo(title, desc, user, image) {
   this.title = title;
   this.desc = desc;
   this.data = getDate();
+  this.user = user;
+  this.image = image;
   this.confirm = false;
 }
 
@@ -54,9 +56,9 @@ const createTemplate = (todo, index) => {
     </div>
     <div>
       <div class="list__item__user">
-      <img src="" alt="" class="user__userImg">
+      <img src="${todo.image}" alt="" class="list__item__user__userImg">
       <p class="user__userName">
-           User
+           ${todo.user}
       </p>
       </div>
       <p class="list__item__data">
