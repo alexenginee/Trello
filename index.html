@@ -15,60 +15,54 @@
             <p class="todo-counter__title">To Do</p>
             <p class="todo-counter__counter">0</p>
           </div>
-          <div class="list">
-           
-          </div>
+          <ul class="lists"></ul>
           <div class="form">
+            <input type="text" class="form__input-title" placeholder="Title" />
             <input
-              class="form__input-title"
-              placeholder="Title"
-            ></input>
-            <input
+              type="text"
               class="form__input-desc"
               placeholder="Write something"
-            ></input>
-          <div class="form__btn">
-            <select class="form__btn__select-user"name="user" id="selectUser">
-            </select>
-             
+            />
+            <div class="form__btn">
+              <select
+                class="form__btn__select-user"
+                name="user"
+                id="selectUser"
+              ></select>
+
               <div class="form__btn__btnOnOff">
                 <button class="form__btn__btnOnOff__btn-cancel">Cancel</button>
-              <button class="form__btn__btnOnOff__btn-confirm">Confirm</button>
+                <button class="form__btn__btnOnOff__btn-confirm">
+                  Confirm
+                </button>
               </div>
-              </div>
+            </div>
           </div>
           <button class="btn-add">New card</button>
         </div>
-        <div>  <div class="boards__item todo">
+
+        <div class="boards__item todo">
           <div class="todo-counter">
             <p class="todo-counter__title">In process</p>
-            <p class="todo-counter__counter">0</p>
+            <p class="todo-counter__counter counter-process">0</p>
           </div>
-          <div class="list">
-          </div>
-          </div>
+          <div class="list"></div>
         </div>
-          <div>  
-          <div class="boards__item todo">
+
+        <div class="boards__item todo">
           <div class="todo-counter">
             <p class="todo-counter__title">Done</p>
-            <p class="todo-counter__counter">0</p>
+            <p class="todo-counter__counter counter-done">0</p>
           </div>
-          <div class="list">
-          </div>
-          
-          </div>
+          <div class="list"></div>
         </div>
-        <div>  
+
         <div class="clock">
           <p id="clock"></p>
         </div>
-        </div>
       </div>
-   
+    </div>
   </body>
 </html>
 
 <script src="./js/trello.js" type="module"></script>
-
-

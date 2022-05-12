@@ -1,24 +1,5 @@
-import {
-  lists,
-  todoCounter,
-  btnAdd,
-  btnConfirm,
-  btnCancel,
-  selectUser,
-  inputDesc,
-  inputTitle,
-  form,
-  clock,
-} from "./init.js";
-import {
-  todos,
-  Todo,
-  createTemplate,
-  render,
-  setLocal,
-  getLocal,
-  getDate,
-} from "./list.js";
+import { selectUser } from "./init.js";
+import { getLocal } from "./list.js";
 export { users, urlUsers, fetchUsers, renderUsers, option };
 
 const urlUsers = "https://api.sampleapis.com/futurama/characters";
@@ -35,7 +16,6 @@ function fetchUsers(url) {
     .then((response) => response.json())
     .then((data) => {
       users = data;
-      console.log(data);
       renderUsers(data);
     });
 }

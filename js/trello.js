@@ -1,7 +1,12 @@
 "use strict";
 import {
   lists,
+  todoConfirmList,
+  todoDeleteList,
+  todoEditList,
   todoCounter,
+  processCounter,
+  doneCounter,
   btnAdd,
   btnConfirm,
   btnCancel,
@@ -9,22 +14,20 @@ import {
   inputDesc,
   inputTitle,
   form,
-  clock,
 } from "./init.js";
-import {
-  todos,
-  Todo,
-  createTemplate,
-  render,
-  setLocal,
-  getLocal,
-  getDate,
-} from "./list.js";
+import { todos, processes, dones, Todo, renderList, setLocal } from "./list.js";
 import { users, urlUsers, fetchUsers, renderUsers, option } from "./users.js";
+import { getclock } from "./clock.js";
 
-render();
-let valueTitle;
+getclock();
+setInterval(getclock, 1000);
+renderList();
+fetchUsers(urlUsers);
+
+todoCounter.innerHTML = todos.length;
+
 let valueDesc;
+let valueTitle;
 
 btnAdd.addEventListener("click", () => {
   form.style.display = "flex";
@@ -41,7 +44,6 @@ btnAdd.addEventListener("click", () => {
   inputTitle.addEventListener("input", (e) => {
     valueTitle = e.target.value;
   });
-  fetchUsers(urlUsers);
 });
 
 btnCancel.addEventListener("click", () => {
@@ -62,27 +64,18 @@ btnConfirm.addEventListener("click", () => {
   );
 
   setLocal("todos", todos);
+  setLocal("processes", processes);
+  setLocal("dones", dones);
   setLocal("users", users);
-  render();
+  renderList();
   todoCounter.innerHTML = todos.length;
   selectUser.value = "";
   inputDesc.value = "";
   inputTitle.value = "";
   form.style.display = "none";
   btnAdd.style.display = "flex";
+
+  todoDeleteList.addEventListener("click", function (event) {
+    console.log(event.target);
+  });
 });
-
-clock.innerText = getDate();
-
-// lists.addEventListener("click", function (event) {
-//   if (event.target.closest(".btn__btnDelete")) {
-//     todos.forEach((e, i) => {
-//       let pane = event.target.closest(`#todo_${i}`);
-//       e == pane;
-
-//       todos.splice(i, 1);
-//       setLocal("todos", todos);
-//       pane.remove();
-//     });
-//   }
-// });
