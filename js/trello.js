@@ -74,8 +74,12 @@ btnConfirm.addEventListener("click", () => {
   inputTitle.value = "";
   form.style.display = "none";
   btnAdd.style.display = "flex";
-
-  todoDeleteList.addEventListener("click", function (event) {
-    console.log(event.target);
-  });
+});
+let list = document.querySelectorAll(".list__item");
+lists.addEventListener("click", ({ target }) => {
+  let id = target.closest(".list__item").getAttribute("data-id");
+  let el = todos.find((el) => el.id == id);
+  console.log(todos.indexof(el));
+  todos.splice(todos.indexof(el), 1);
+  renderList();
 });

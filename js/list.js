@@ -34,13 +34,14 @@ if (!localStorage.dones) {
   dones = getLocal("dones");
 }
 
-function Todo(title, desc, user, image) {
+function Todo(title, desc, user, image, id) {
   this.title = title;
   this.desc = desc;
   this.data = getDate();
   this.user = user;
   this.image = image;
   this.confirm = false;
+  this.id = id;
 }
 
 const createTemplate = (todo, index) => {
