@@ -23,7 +23,6 @@ let option;
 function renderUsers(array) {
   array.forEach((el) => {
     option = document.createElement("option");
-
     option.dataset.image = `${el.images.main}`;
     option.innerText = `${el.name.first} ${el.name.last}`;
     selectUser.append(option);

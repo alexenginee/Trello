@@ -59,6 +59,9 @@ btnConfirm.addEventListener("click", () => {
       inputTitle.value,
       inputDesc.value,
       selectUser.value,
+      function dataImage(){
+        selectUser.forEach((el)=>)
+      }
       option.dataset.image
     )
   );
@@ -75,6 +78,7 @@ btnConfirm.addEventListener("click", () => {
   form.style.display = "none";
   btnAdd.style.display = "flex";
 });
+
 let list = document.querySelectorAll(".list__item");
 lists.addEventListener("click", ({ target }) => {
   let id = target.closest(".list__item").getAttribute("data-id");
